@@ -1,0 +1,22 @@
+{"locations": ["l1", "l2", "l3", "f1", "l4", "psl1", "psl2", "psl3", "psl4", "psl5", "psl6", "psl7", "psl8", "psl9", "psl10", "l9", "f2"], "events": ["l", "h"], "init_loc": "l4", "clocks": ["_cl_1"], "parameters": ["_epsilon", "_xlen_1", "_xnonletters_1", "_xfirstmismatch_1", "_p1", "_p2"], "invariants": [
+    {"l1": ["_cl_1 <=  _epsilon "]}, 
+{"l2": ["_cl_1 <=  _epsilon "]}, 
+{"l3": ["_cl_1 <=  _epsilon "]}, 
+{"f1": []}, 
+{"l4": []}, 
+{"psl1": []}, 
+{"psl2": []}, 
+{"psl3": []}, 
+{"psl4": []}, 
+{"psl5": []}, 
+{"psl6": []}, 
+{"psl7": []}, 
+{"psl8": []}, 
+{"psl9": []}, 
+{"psl10": []}, 
+{"l9": ["_cl_1 <=  _epsilon "]}, 
+{"f2": []}], "edges": [
+    {"from": "l4", "to": "f2", "event": "l", "guard": [" _xnonletters_1 == 0 ", "_xlen_1 <= 10", "_xfirstmismatch_1 >= 10", "_cl_1 <= 10 * 150000 * 10 + _epsilon + _p2 ", "_cl_1 >= 10 * 150000 * 10 - _epsilon + _p2 " ], "clock": []}, 
+    {"from": "l4", "to": "h1", "event": "h", "guard": [" _xnonletters_1 == 0 ", "_xlen_1 <= 10", "_xfirstmismatch_1 < 10", "_cl_1 <= _epsilon" ], "clock": []},
+    {"from": "h1", "to": "f2", "event": "l", "guard": ["_xlen_1 <= 10", "_cl_1 <= 10 * 150000 * _xlen_1 + _epsilon + _p1 ", "_cl_1 >= 150000 * _xlen_1 - _epsilon + _p1 " ], "clock": []}
+], "param_inv": [" _xlen_1 >= 0", " _xfirstmismatch_1 >= 0",  " _epsilon >= 0", " _epsilon <= 1"]}

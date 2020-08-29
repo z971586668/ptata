@@ -1,0 +1,25 @@
+
+{"locations": ["l1", "l2", "l3", "f1", "l4", "m1", "m2", "m3", "h1", "h2", "h3", "f2"], "events": ["l", "h"], "init_loc": "m2", "clocks": ["_cl_1"], "parameters": ["_x_1", "_t_1", "_secret_1", "_epsilon", "_p11", "_p21", "_p31", "_p12", "_p22", "_p32"], "invariants": [
+    {"l1": ["_cl_1 <=  _epsilon "]}, 
+{"l2": ["_cl_1 <=  _epsilon "]}, 
+{"l3": ["_cl_1 <=  _epsilon "]}, 
+{"f1": []}, 
+{"l4": ["_cl_1 <=  _epsilon "]}, 
+{"h1": ["_cl_1 <=  _epsilon "]}, 
+{"m1": []}, 
+{"m2": []}, 
+{"m3": []}, 
+{"h2": ["_cl_1 <=  _epsilon "]}, 
+{"h3": []}, 
+{"f2": []}], 
+"edges": [
+
+{"from": "m2", "to": "h2", "event": "h", "guard": ["_t_1 == 2", " _cl_1 <= _epsilon ", " _x_1 <= _secret_1 ", " _epsilon >= 0", " _epsilon <= 1", " _t_1 >= 0"], "clock": []}, 
+
+{"from": "m2", "to": "f2", "event": "l", "guard": ["_t_1 == 2", " _x_1 > _secret_1 ", " _p21 - _epsilon + 400 <= _cl_1 ", " _cl_1 <= _p21 + _epsilon + 400 ", " _epsilon >= 0", " _epsilon <= 1", " _t_1 >= 0"], "clock": []}, 
+
+
+{"from": "h2", "to": "f2", "event": "l", "guard": [" _p22 + 20 - _epsilon <= _cl_1 ", " _cl_1 <= _p22 + _epsilon + 20 ", " _epsilon >= 0", " _epsilon <= 1", " _t_1 >= 0"], "clock": ["_cl_1"]}
+
+
+], "param_inv": [" _t_1 >= 0", " _epsilon <= 1", " _epsilon >= 0"]}

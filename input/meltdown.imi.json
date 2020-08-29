@@ -1,0 +1,25 @@
+
+{"locations": ["l1", "l2", "l3", "l4", "f1", "l5", "cache", "mem", "f2"], "events": ["l", "h1", "h2", "h3"], "init_loc": "l1", "clocks": ["_cl_1", "_abs_clock"], "parameters": ["_x_1", "_secret_1", "_epsilon", "_abs_ptime", "_excep", "_p1", "_p2"], "invariants": [
+    {"l1": ["_cl_1 <=  _epsilon "]}, 
+{"l2": ["_cl_1 <=  _epsilon "]}, 
+{"l3": ["_cl_1 <=  _epsilon "]}, 
+{"l4": ["_cl_1 <=  _epsilon "]}, 
+{"f1": []}, 
+{"l5": ["_cl_1 <=  _epsilon "]}, 
+{"cache": []}, 
+{"mem": []}, 
+{"f2": []}], "edges": [
+    {"from": "l1", "to": "l2", "event": "l", "guard": ["_cl_1 <=  _epsilon ", " _abs_clock <= _excep "], "clock": ["_cl_1"]}, 
+{"from": "l2", "to": "l3", "event": "l", "guard": ["_cl_1 <=  _epsilon ", " _abs_clock <=_excep "], "clock": ["_cl_1"]}, 
+{"from": "l2", "to": "f1", "event": "l", "guard": ["_cl_1 <=  _epsilon ", " _abs_clock > _excep "], "clock": ["_cl_1"]}, 
+{"from": "l3", "to": "l4", "event": "l", "guard": ["_cl_1 <=  _epsilon ", " _abs_clock <= _excep "], "clock": ["_cl_1", "_abs_clock"]}, 
+{"from": "l3", "to": "f2", "event": "l", "guard": ["_cl_1 <=  _epsilon ", " _abs_clock > _excep "], "clock": ["_cl_1", "_abs_clock"]}, 
+{"from": "l4", "to": "f2", "event": "l", "guard": [" _x_1 <= 0 ", "_cl_1 <=  _epsilon "], "clock": ["_cl_1"]}, 
+{"from": "l4", "to": "l5", "event": "l", "guard": ["_cl_1 <=  _epsilon ", " _x_1 > 0 "], "clock": ["_cl_1"]}, 
+{"from": "l5", "to": "cache", "event": "h1", "guard": ["_cl_1 <=  _epsilon ", "  _x_1 == _secret_1 "], "clock": ["_cl_1"]}, 
+{"from": "l5", "to": "f2", "event": "l", "guard": ["  _x_1 > _secret_1 ", " _p2 - _epsilon <= _cl_1 ", " _cl_1 <= _p2 + _epsilon"], "clock": ["_cl_1"]}, 
+{"from": "l5", "to": "f2", "event": "l", "guard": ["  _x_1 < _secret_1 ", " _p2 - _epsilon <= _cl_1 ", " _cl_1 <= _p2 + _epsilon"], "clock": ["_cl_1"]}, 
+{"from": "cache", "to": "f2", "event": "l", "guard": [" _p1 - _epsilon <= _cl_1 ", " _cl_1 <= _p1 + _epsilon "], "clock": []}
+
+
+], "param_inv": [" _epsilon >= 0", " _epsilon <= 10"]}

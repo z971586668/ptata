@@ -1,0 +1,17 @@
+
+{"locations": ["l1", "l2", "l3", "f1", "l4", "l5", "l6", "l8", "l7", "f2","h1"], "events": ["l", "h"], "init_loc": "l4", "clocks": ["_cl_1"], "parameters": ["_x_1", "_x_2", "_xlen", "_epsilon", "_wait", "_xnonletters", "_xmismatches", "_p1", "_p2"], "invariants": [
+    {"l1": ["_cl_1 <=  _epsilon "]}, 
+{"l2": ["_cl_1 <=  _epsilon "]}, 
+{"l3": ["_cl_1 <=  _epsilon "]}, 
+{"f1": []}, 
+{"l4": ["_cl_1 <=  _epsilon "]}, 
+{"l5": []}, 
+{"l6": []}, 
+{"l8": []}, 
+{"h1": []}, 
+{"l7": ["_cl_1 <=  _epsilon "]}, 
+{"f2": []}], "edges": [
+    {"from": "l4", "to": "f2", "event": "l", "guard": [" _xlen <= 10 ", "_xnonletters <= 0", " _xlen >= 0 ", " _xmismatches >=0 ", " _xmismatches >= _xlen", " _epsilon >= 0", " _epsilon <= 10", "_cl_1 >= 10 * _wait + _p1 - _epsilon", "_cl_1 <= 10 * _wait + _p1 + _epsilon"], "clock": ["_cl_1"]}, 
+    {"from": "l4", "to": "h1", "event": "h", "guard": ["_cl_1 <= _epsilon", " _xlen <= 10 ", "_xnonletters <= 0", " _xlen >= 0 ", " _xmismatches >=0 ", " _xmismatches < _xlen", " _epsilon >= 0"], "clock": ["_cl_1"]}, 
+    {"from": "h1", "to": "f2", "event": "l", "guard": ["_cl_1 >= _xmismatches * _wait + _p2 - _epsilon", "_cl_1 <= _xmismatches * _wait + _p2 + _epsilon", " _xlen <= 10 ", " _xlen >= 0 ", " _xmismatches >=0 ", " _epsilon >= 0"], "clock": ["_cl_1"]}
+    ], "param_inv": [" _epsilon <= 10", " _xmismatches < _xlen", " _epsilon >= 0", " _xmismatches >=0 ", " _xlen >= 0 ", " _xnonletters>=0 ", " _xnonletters < _xlen"]}

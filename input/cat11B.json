@@ -1,0 +1,30 @@
+
+{"locations": ["l1", "l2", "l3", "final1", "l4", "loop0", "loop1", "loop2", "loop3", "loop4", "loop5", "loop6", "loop7", "loop8", "loop9", "l6", "l7", "l8", "f2", "h1"], "events": ["l", "h", "h2"],
+    "parameters": ["_epsilon", "_guess_1", "_secret_1", "_p1", "_p2", "_nontrue"],
+    "invariants": [
+    {"l1": ["_cl_1 <=  _epsilon "]}, 
+{"l2": ["_cl_1 <=  _epsilon "]}, 
+{"l3": ["_cl_1 <=  _epsilon "]}, 
+{"final1": []}, 
+{"h1": []},
+{"l4": ["_cl_1 <=  _epsilon "]}, 
+{"loop0": ["_cl_1 <=  _epsilon "]}, 
+{"loop1": ["_cl_1 <=  _epsilon "]}, 
+{"loop2": ["_cl_1 <=  _epsilon "]}, 
+{"loop3": ["_cl_1 <=  _epsilon "]}, 
+{"loop4": ["_cl_1 <=  _epsilon "]}, 
+{"loop5": ["_cl_1 <=  _epsilon "]}, 
+{"loop6": ["_cl_1 <=  _epsilon "]}, 
+{"loop7": ["_cl_1 <=  _epsilon "]}, 
+{"loop8": ["_cl_1 <=  _epsilon "]}, 
+{"loop9": ["_cl_1 <=  _epsilon "]}, 
+{"l6": ["_cl_1 <=  _epsilon "]}, 
+{"l7": ["_cl_1 <=  10 + _epsilon "]}, 
+{"l8": ["_cl_1 <=  _epsilon "]}, 
+{"f2": []}], "init_loc": "l4", "edges": [
+    {"from": "l4", "to": "f2", "event": "l", "guard": ["_guess_1 > _secret_1", " _epsilon >= 0", " _epsilon <= 1", "_cl_1 <=  _epsilon + _p1", "_cl_1 >= -_epsilon + _p1"], "clock": ["_cl_1"]}, 
+    {"from": "l4", "to": "h1", "event": "h", "guard": ["_guess_1 <= _secret_1", "_cl_1 <= _epsilon", " _epsilon >= 0", " _epsilon <= 1"], "clock": ["_cl_1"]}, 
+    {"from": "h1", "to": "f2", "event": "l", "guard": ["_cl_1 <=  _epsilon + _p2 + 10 * _nontrue", "_cl_1 >= -_epsilon + _p2 + 10 * _nontrue", " _epsilon >= 0", " _epsilon <= 1"], "clock": ["_cl_1"]} 
+    
+    
+    ], "clocks": ["_cl_1"], "param_inv": [" _epsilon <= 1", " _epsilon >= 0"]}
